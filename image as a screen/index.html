@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Menu</title>
+    <link rel="stylesheet" href="button-container.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <svg id="svg-container" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" preserveAspectRatio="xMidYMid meet">
+        <defs>
+            <clipPath id="crop">
+                <rect x="0" y="0" width="100%" height="100%" />
+            </clipPath>
+        </defs>
+        <image id="screenshot-image" xlink:href="" width="100%" height="100%" clip-path="url(#crop)" />
+    </svg>
+
+    <div class="button-container" id="button-container">
+        <button class="toggle-btn" id="toggleBtn">Minimize</button>
+        <button class="toggle-btn" id="destroyBtn">Destroy</button>
+        <input type="file" id="image-upload" accept="image/*">
+        <select id="fit-mode">
+            <option value="horizontal">Fit Horizontally</option>
+            <option value="vertical">Fit Vertically</option>
+        </select>
+        <input style="display: block;" id="submit" type="button" value="Submit Hotspots">
+        <input style="display: none;" id="unsubmit" type="button" value="Show Hotspots">
+        <input id="delete" type="button" value="Delete Hotspots">
+        <input id="saveButton" type="button" value="Save State">
+        <input id="loadButton" type="button" value="Load State">
+    </div>
+
+    <script src="save-state.js"></script>
+    <script src="button-container.js"></script>
+    <script src="draw.js"></script>
+    <script src="image-upload.js"></script>
+</body>
+</html>

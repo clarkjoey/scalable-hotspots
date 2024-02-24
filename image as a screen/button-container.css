@@ -1,0 +1,44 @@
+.button-container {
+    z-index: 3;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    max-height: 300px; /* Initial height, adjust as needed */
+    max-width: 400px;
+}
+.button-container.collapsed {
+    max-height: 20px; /* Height when collapsed */
+    border: none; /* Remove border when collapsed */
+}
+.button-container input[type="file"],
+.button-container input[type="button"],
+.button-container select {
+    margin-bottom: 10px;
+}
+.button-container input[type="button"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button-container input[type="button"]:hover {
+    background-color: #0056b3;
+}
+.button-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
